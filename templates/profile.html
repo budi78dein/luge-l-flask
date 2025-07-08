@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Profil</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></head>
+<body class="container mt-5">
+<h2>Halo, {{ user[1] }}</h2>
+<p>Terdaftar sejak: {{ user[4] }}</p>
+{% if user[3] %}
+  <img src="{{ url_for('static', filename='uploads/' + user[3]) }}" width="200"><br><br>
+{% endif %}
+<a class="btn btn-danger" href="/logout">Logout</a>
+</body></html>
